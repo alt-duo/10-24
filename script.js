@@ -1,11 +1,11 @@
 
-let y = Math.floor(Math.random() * 10 + 1);
 let guess = 1;
 document.getElementById("submitguess").onclick = function () {
+    let arr = ["red", "yellow", "green"];
     let x = document.getElementById("guessField").value;
     x = x.toLowerCase();
     
-    if (x == "green") {
+    if (x == arr[2]) {
         x = "go";
         let j = "";    
         for(let i = 0;i<100; i++){
@@ -13,7 +13,7 @@ document.getElementById("submitguess").onclick = function () {
         }
         document.getElementById("custom-div").innerHTML = j;
     }
-    if(x == "yellow"){
+    if(x == arr[1]){
         x = "slow";
         let j = "";    
         for(let i = 0;i<100; i++){
@@ -21,7 +21,7 @@ document.getElementById("submitguess").onclick = function () {
         }
         document.getElementById("custom-div").innerHTML = j;
     }
-    if(x == "red"){
+    if(x == arr[0]){
         x = "stop";
         let j = "";    
         for(let i = 0;i<100; i++){
